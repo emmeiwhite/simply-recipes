@@ -282,9 +282,12 @@ Navbar
   width: 12.5rem;
 }
 
+.nav-logo {
+  display: flex;
+}
+
 .nav-btn {
   padding: 0.25rem 0.75rem;
-  margin-top: -1rem;
 }
 
 .nav-btn i {
@@ -296,6 +299,14 @@ Navbar
   display: flex;
   flex-direction: column;
   /* todo */
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+/* this class toggles height on click of the hamburger icon */
+.show-links {
+  height: 19.375rem;
 }
 
 .nav-links .nav-link {
@@ -315,4 +326,33 @@ Navbar
 
 .contact-link a {
   padding: 0.15rem 1rem;
+}
+
+@media (min-width: 48rem) {
+  /*--- nav-links ---*/
+  .nav-links {
+    flex-direction: row;
+    height: 6rem;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .nav-links .nav-link {
+    border-top: none;
+    margin-left: 1.5rem;
+  }
+
+  .nav-link.contact-link {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-center {
+    display: flex;
+  }
 }

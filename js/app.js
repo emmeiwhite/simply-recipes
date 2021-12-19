@@ -1,19 +1,18 @@
 const getElement = (selector) => {
-  const element = document.querySelector(selector)
+  const element = document.querySelector(selector);
 
-  if (element) return element
-  throw Error(
-    `Please double check your class names, there is no ${selector} class`
-  )
-}
+  if (element) {
+    return element;
+  }
 
-const links = getElement('.nav-links')
-const navBtnDOM = getElement('.nav-btn')
+  throw new Error(
+    `selector not correctly used. There is no ${selector} class selector`
+  );
+};
 
-navBtnDOM.addEventListener('click', () => {
-  links.classList.toggle('show-links')
-})
+const navBtn = getElement(".nav-btn");
+const navLinks = getElement(".nav-links");
 
-const date = getElement('#date')
-const currentYear = new Date().getFullYear()
-date.textContent = currentYear
+navBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show-links");
+});
