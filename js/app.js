@@ -10,9 +10,14 @@ const getElement = (selector) => {
   );
 };
 
+// Getting Current Year Dynamically
 const navBtn = getElement(".nav-btn");
 const navLinks = getElement(".nav-links");
 
 navBtn.addEventListener("click", () => {
   navLinks.classList.toggle("show-links");
 });
+
+const date = getElement(".current-date");
+let year = new Date().getFullYear();
+date.textContent = year;

@@ -2,6 +2,8 @@
 ::after,
 ::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 /* fonts */
 
@@ -355,4 +357,41 @@ Navbar
   .nav-center {
     display: flex;
   }
+}
+
+/*
+=============== 
+Page
+===============
+*/
+.page {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: calc(100vh - (6rem + 4rem));
+  padding-top: 2rem;
+}
+
+/*
+=============== 
+Page Footer
+===============
+*/
+
+.page-footer {
+  background-color: var(--black);
+  height: 4rem;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer p {
+  margin-bottom: 0;
+}
+
+.footer-logo,
+.page-footer a {
+  color: var(--primary-500);
 }
