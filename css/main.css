@@ -572,6 +572,33 @@ Recipes
 ================
 */
 
+.about-page {
+  display: grid;
+  grid-gap: 2rem 4rem;
+  padding-bottom: 3rem;
+}
+
+.about-img {
+  height: 18.75rem;
+}
+
+.about-page h2 {
+  text-transform: none;
+  font-weight: 600;
+}
+
 .featured-title {
   text-align: center;
+}
+
+@media (min-width: 992px) {
+  .about-page {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25rem;
+    align-items: center;
+  }
+
+  .about-img {
+    height: 100%;
+  }
 }
