@@ -499,3 +499,79 @@ Recipes
   color: var(--grey-500);
   letter-spacing: var(--letterSpacing);
 }
+
+/*
+=============================
+  Making Website Responsive
+=============================
+*/
+
+@media (min-width: 576px) {
+  .recipes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recipe-img {
+    height: 10rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .recipes-container {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .tags-container {
+    order: 0;
+  }
+
+  .tags-list {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .recipes-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .recipe h5 {
+    font-size: 1.15rem;
+  }
+}
+
+/*
+================
+  Error Page
+================
+*/
+
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  transform: translateY(-10%);
+}
+
+.error-page section {
+  display: inline-block;
+}
+
+.error-page h1 {
+  font-size: 9rem;
+}
+
+/*
+================
+  About Page
+================
+*/
+
+.featured-title {
+  text-align: center;
+}
