@@ -620,6 +620,14 @@ Recipes
   padding-bottom: 3rem;
 }
 
+@media (min-width: 576px) {
+  .form {
+    max-width: 100%;
+  }
+  .contact-info {
+    max-width: 100%;
+  }
+}
 @media (min-width: 992px) {
   .contact-container {
     grid-template-columns: 1fr 450px;
